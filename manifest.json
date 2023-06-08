@@ -7,10 +7,25 @@
   "permissions": [
     "tabs",
     "background",
-    "activeTab"
+    "activeTab",
+    "tabCapture",
+    "storage",
+    "scripting",
+    "system.display",
+    "offscreen"
   ],
   "host_permissions": [
     "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["controller.html"],
+      "matches": [ "chrome-extension://*/*" ]
+    },
+    {
+      "resources": ["controller.js"],
+      "matches": [ "chrome-extension://*/*" ]
+    }
   ],
   "action": {
     "default_popup": "index.html",
